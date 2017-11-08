@@ -1,29 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {PasswordModule, InputTextModule, ButtonModule} from 'primeng/primeng';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import {RouterModule, Routes} from '@angular/router';
+import {LoginModule} from './login/login.module';
+import {AdminModule} from './admin/admin.module';
+
+export const ROUTES: Routes = [];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    PasswordModule,
-    InputTextModule,
-    ButtonModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(ROUTES),
+    LoginModule,
+    AdminModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
