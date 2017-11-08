@@ -12,7 +12,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   login() {
-    this.http.get('https://api.github.com/orgs/angular/members?page=1&per_page=5').subscribe(data => {
+    this.http.post('/login', {username : 11, password : 11}).subscribe(data => {
+      console.log(data);
+    });
+  }
+  getUser() {
+    this.http.get('/users/39').subscribe(data => {
       console.log(data);
     });
   }

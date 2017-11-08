@@ -1,0 +1,15 @@
+<form #loginForm = "ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+    <input ngModel name="account" type="text" pInputText placeholder="Username">
+  </div>
+
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon"><i class="fa fa-lock"></i></span>
+    <input ngModel name="password" type="password" pPassword placeholder="Password" feedback />
+  </div>
+
+  <button type="submit">submit</button>
+
+</form>
