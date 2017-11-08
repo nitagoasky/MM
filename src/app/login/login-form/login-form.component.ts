@@ -19,7 +19,7 @@ export class LoginFormComponent implements OnInit {
       headers : {'Accept': 'application/json'}
     }).subscribe(data => {
       if ( data['code'] === 0) {
-        this.router.navigate(['/admin/user']);
+        this.router.navigate(['/admin/']);
       }
     });
   }

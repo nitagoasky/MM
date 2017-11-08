@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginModule} from './login/login.module';
 import {AdminModule} from './admin/admin.module';
+import {LoginComponent} from "./login/login.component";
 
-export const ROUTES: Routes = [];
+export const ROUTES: Routes = [
+  { path: '', component: LoginComponent }
+];
 
 @NgModule({
   declarations: [
