@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
@@ -8,9 +9,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginModule} from './login/login.module';
 import {AdminModule} from './admin/admin.module';
 import {LoginComponent} from './login/login.component';
-import {AdminComponent} from './admin/admin.component';
-import {UserComponent} from './admin/user/user.component';
-import {MirrorComponent} from './admin/mirror/mirror.component';
 import { Page404Component } from './common/page-404/page-404.component';
 import {HttpData} from './config/HttpData';
 
@@ -25,7 +23,7 @@ export const ROUTES: Routes = [
     Page404Component,
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -34,7 +32,7 @@ export const ROUTES: Routes = [
     AdminModule
   ],
   providers: [
-    HttpData
+    HttpData,
   ],
   bootstrap: [AppComponent]
 })

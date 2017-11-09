@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mirror',
+  selector: 'app-admin-mirror',
   templateUrl: './mirror.component.html',
   styleUrls: ['./mirror.component.css']
 })

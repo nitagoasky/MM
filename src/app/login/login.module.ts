@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PasswordModule, InputTextModule, ButtonModule} from 'primeng/primeng';
+import {PlunkerMaterialModule} from "../config/Common";
 
 export const ROUTES: Routes = [
   { path: 'login', component: LoginComponent }
@@ -15,9 +15,7 @@ export const ROUTES: Routes = [
     CommonModule,
     RouterModule.forChild(ROUTES),
     FormsModule,
-    PasswordModule,
-    InputTextModule,
-    ButtonModule,
+    PlunkerMaterialModule
   ],
   declarations: [
     LoginComponent,

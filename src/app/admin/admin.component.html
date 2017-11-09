@@ -1,2 +1,21 @@
-<admin-menu></admin-menu>
-<router-outlet></router-outlet>
+<div>
+  <app-admin-header></app-admin-header>
+</div>
+<div>
+  <div>
+<button type="button" mat-button (click)="sidenav.open()">
+  Open sidenav
+</button>
+  </div>
+</div>
+<div>
+  <div>
+    <mat-sidenav mode="side" align="end" class="mat-elevation-z6" #sidenav>
+      <app-admin-menu></app-admin-menu>
+    </mat-sidenav>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

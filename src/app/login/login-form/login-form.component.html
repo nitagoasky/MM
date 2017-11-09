@@ -1,14 +1,12 @@
-<form #loginForm = "ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+<form #loginForm = "ngForm" class="example-form" (ngSubmit)="onSubmit(loginForm.value)">
 
-  <div class="ui-inputgroup">
-    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-    <input ngModel name="account" type="text" pInputText placeholder="Username">
-  </div>
+  <mat-form-field class="example-full-width">
+    <input matInput ngModel name="account" type="text" placeholder="Username">
+  </mat-form-field>
 
-  <div class="ui-inputgroup">
-    <span class="ui-inputgroup-addon"><i class="fa fa-lock"></i></span>
-    <input ngModel name="password" type="password" pPassword placeholder="Password" feedback />
-  </div>
+  <mat-form-field class="example-full-width">
+    <input matInput ngModel name="password" type="password" placeholder="Password" />
+  </mat-form-field>
 
-  <button pButton type="submit" label="Click"></button>
+  <button mat-button type="submit">Click</button>
 </form>
