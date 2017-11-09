@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Code} from '../../module/Code';
 import {Router} from '@angular/router';
+import {HttpData} from '../../config/HttpData';
 
 @Component({
   selector: 'app-login-form',
@@ -10,12 +11,12 @@ import {Router} from '@angular/router';
 })
 export class LoginFormComponent implements OnInit {
   public codes: Code[];
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private httpData: HttpData) { }
 
   ngOnInit() {
   }
   onSubmit(value: any ) {
-    this.http.post('/login', value, {
+    this.http.post(this.httpData.HOST + '/login', value, {
       headers : {'Accept': 'application/json'}
     }).subscribe(data => {
       if ( data['code'] === 0) {

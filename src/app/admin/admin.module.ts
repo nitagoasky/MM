@@ -5,11 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import {MenuComponent} from './menu/menu.component';
 import {PanelMenuModule} from 'primeng/primeng';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MirrorComponent} from "./mirror/mirror.component";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MirrorComponent} from './mirror/mirror.component';
 
 export const ROUTES: Routes = [
-  { path: 'admin', component: AdminComponent, children:[
+  { path: 'admin', component: AdminComponent, children: [
     {path: 'user', component: UserComponent},
     {path: 'mirror', component: MirrorComponent}
   ]},
